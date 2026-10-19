@@ -4,7 +4,7 @@ siteHeaderTemplate.innerHTML = `
     <div class="container header-inner">
       <a class="brand" href="./index.html" aria-label="틈틈 처음으로">틈틈</a>
       <nav class="nav" aria-label="페이지 탐색"><a href="./agent.html">수행</a><a href="./request.html">요청</a><a href="./ad.html">Ad+</a></nav>
-      <a class="button primary" data-header-cta href="#">바로 시작하기</a>
+      <a class="button primary" data-header-cta href="https://app.tumtum.kr">바로 시작하기</a>
     </div>
   </header>
 `;
@@ -29,13 +29,6 @@ function renderSiteLayout() {
 
 function init() {
   renderSiteLayout();
-
-  document.querySelectorAll("[data-header-cta], [data-cta-link]").forEach((cta) => {
-    cta.addEventListener("click", (event) => {
-      event.preventDefault();
-      alert("준비중입니다.");
-    });
-  });
 
   const revealTargets = document.querySelectorAll(
     ".section > .container > *, .situation, .example, .action, .flow-item, .principles li"
